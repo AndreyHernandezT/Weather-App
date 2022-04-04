@@ -21,14 +21,14 @@ class SearchPage extends StatelessWidget {
               textInputAction: TextInputAction.search,
               onSubmitted: (value) {},
               decoration: InputDecoration(
-                  isDense: true,
-                  contentPadding: EdgeInsets.all(10),
-                  prefix: Icon(
+                  //isDense: true,
+                  contentPadding: EdgeInsets.all(5),
+                  prefixIcon: Icon(
                     Icons.search,
                     color: Colors.white,
                   ),
                   hintStyle: TextStyle(color: Colors.white),
-                  hintText: 'Buscar',
+                  hintText: 'Buscar...',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: Colors.white)),
@@ -41,6 +41,12 @@ class SearchPage extends StatelessWidget {
             height: 30,
             color: Colors.white,
           ),
+          Text('Weather App',
+              style: TextStyle(
+                  fontSize: 50,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white)),
+          Padding(padding: EdgeInsets.all(10)),
           SizedBox(
             width: 350,
             child: Card(
@@ -65,11 +71,11 @@ class SearchPage extends StatelessWidget {
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
-                        Divider(
-                          color: Colors.white,
-                        )
                       ],
                     ),
+                  ),
+                  Divider(
+                    color: Colors.white,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -93,83 +99,110 @@ class SearchPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(right: 20),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.all(20),
-                                  width: 100,
-                                  height: 100,
-                                  color: Colors.grey,
-                                )
-                              ],
+                      Container(
+                        padding: EdgeInsets.only(right: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.all(20),
+                              width: 100,
+                              height: 100,
+                              color: Colors.grey,
                             ),
-                          ),
-                          Text('Tiempo actual',
-                              style: TextStyle(color: Colors.white)),
-                          SizedBox(height: 10),
-                        ],
-                      )
+                            Text('Tiempo actual',
+                                style: TextStyle(color: Colors.white)),
+                          ],
+                        ),
+                      ),
                     ],
-                  )
+                  ),
+                  SizedBox(height: 15),
                 ],
               ),
             ),
           ),
-          Row(            
+          Row(
             children: [
               Padding(padding: EdgeInsets.only(top: 30, left: 10)),
-              Text('Información Adicional', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),),
+              Text(
+                'Información Adicional',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20),
+              ),
             ],
           ),
           Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(            
+                Column(
                   children: [
-                    Text('7 km/h', style: TextStyle(color: Colors.white,  fontSize: 20),),
+                    Text(
+                      '7 km/h',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
                     Row(
                       children: [
                         Icon(
                           Icons.air_rounded,
                           color: Colors.white,
                         ),
-                        Text(' Viento', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),),
+                        Text(
+                          ' Viento',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
                       ],
                     ),
-                    
                   ],
                 ),
-                Column(            
+                Column(
                   children: [
-                    Text('1021.5', style: TextStyle(color: Colors.white,  fontSize: 20),),
+                    Text(
+                      '1021.5',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
                     Row(
                       children: [
                         Icon(
                           Icons.show_chart_rounded,
                           color: Colors.white,
                         ),
-                        Text(' Presión del aire', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),),
+                        Text(
+                          ' Presión del aire',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
                       ],
                     ),
                   ],
-                ),Column(            
+                ),
+                Column(
                   children: [
-                    Text('58%', style: TextStyle(color: Colors.white,  fontSize: 20),),                  
+                    Text(
+                      '58%',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
                     Row(
                       children: [
                         Icon(
                           Icons.opacity_rounded,
                           color: Colors.white,
                         ),
-                        Text(' Humedad', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),),
+                        Text(
+                          ' Humedad',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14),
+                        ),
                       ],
                     ),
                   ],

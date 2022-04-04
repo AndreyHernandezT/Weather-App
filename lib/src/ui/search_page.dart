@@ -21,14 +21,14 @@ class SearchPage extends StatelessWidget {
               textInputAction: TextInputAction.search,
               onSubmitted: (value) {},
               decoration: InputDecoration(
-                  isDense: true,
-                  contentPadding: EdgeInsets.all(10),
-                  prefix: Icon(
+                  //isDense: true,
+                  contentPadding: EdgeInsets.all(5),
+                  prefixIcon: Icon(
                     Icons.search,
                     color: Colors.white,
                   ),
                   hintStyle: TextStyle(color: Colors.white),
-                  hintText: 'Buscar',
+                  hintText: 'Buscar...',
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: Colors.white)),
